@@ -73,7 +73,6 @@ Università della Svizzera italiana, Lugano 6900 CH
 - Experience with Python, TensorFlow, and PyTorch
 - Strong foundation in linear algebra and probability
 
-#pagebreak()
 
 == 2015-2018: Bachelor in Informatics
 
