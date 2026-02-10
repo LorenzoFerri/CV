@@ -26,4 +26,4 @@ You can download the built CV from the workflow run artifacts in the [Actions ta
 
 ## Workflow Badge
 
-![Build CV](https://github.com/LorenzoFerri/CV/workflows/Build%20CV/badge.svg)
+![Build CV](https://github.com/LorenzoFerri/CV/actions/workflows/build-cv.yml/badge.svg)
