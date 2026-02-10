@@ -15,11 +15,11 @@
   ],
 )
 
-#v(1em)
+#v(2em)
 
 = SUMMARY
 
-- Software engineer focused on mobile (SwiftUI, Jetpack Compose) and web (React) development
+- Software engineer focused on mobile (SwiftUI, Jetpack Compose), web (React), and backend (Java, Spring Boot) development
 - Experience integrating LLMs and AI agents into production applications
 - Master's background in Artificial Intelligence with knowledge of programming paradigms and design patterns
 
@@ -32,6 +32,7 @@
 - Integrated LLMs and AI agents into applications to enhance functionality and workflows
 - Built native Android and iOS apps with SwiftUI and Jetpack Compose
 - Developed React web applications for internal and customer-facing tools
+- Built backend services with Java and Spring Boot for scalable applications
 
 == 2020-2021: Mobile Developer
 
@@ -51,7 +52,7 @@ Coopar, Lugano
 
 - Completed a 4-month internship building an Electron desktop application for survey visualization
 
-#v(1em)
+#v(2em)
 
 = OPEN SOURCE CONTRIBUTIONS
 
@@ -61,7 +62,7 @@ Coopar, Lugano
 
 - Implemented Windows platform support for a cross-platform Swift UI toolkit
 
-#v(1em)
+#v(2em)
 
 = EDUCATION AND TRAINING
 
@@ -83,7 +84,7 @@ Università della Svizzera italiana, Lugano 6900 CH
 - Networking, client-server models, and web stacks
 - Collaboration in agile software teams
 
-#v(1em)
+#v(2em)
 
 = TECHNICAL SKILLS
 
@@ -91,7 +92,9 @@ Università della Svizzera italiana, Lugano 6900 CH
 
 - Swift
 - Kotlin
+- Java
 - TypeScript
+- Python
 - C
 - C++
 - C\#
