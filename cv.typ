@@ -1,21 +1,22 @@
 #show link: set text(fill: rgb("#0066CC"))
 #show link: underline
+#show heading.where(level: 1): it => [#v(1.5em) #it]
 
 #grid(
   columns: (1fr, auto),
   [
-    = Lorenzo Ferri
-
-    Curriculum Vitae
+    #title[Lorenzo Ferri]
+    == Curriculum Vitae
   ],
   align(right)[
-    Via delle Ale 4, Lugano, 6900 CH #box(baseline: 25%, image("mappin.circle.svg", width: 1em)) \
-    #link("tel:+41765092342")[076 5092342] #box(baseline: 25%, image("phone.circle.svg", width: 1em)) \
-    #link("mailto:lorenzo.ferri@exmachina.ch")[lorenzo.ferri\@exmachina.ch] #box(baseline: 25%, image("envelope.circle.svg", width: 1em))
+    Via delle Ale 4, Lugano, 6900 CH
+    #box(baseline: 25%, image("mappin.circle.svg", width: 1em)) \
+    #link("tel:+41765092342")[076 5092342]
+    #box(baseline: 25%, image("phone.circle.svg", width: 1em)) \
+    #link("mailto:lorenzo.ferri@exmachina.ch")[lorenzo.ferri\@exmachina.ch]
+    #box(baseline: 25%, image("envelope.circle.svg", width: 1em))
   ],
 )
-
-#v(2em)
 
 = SUMMARY
 
@@ -47,22 +48,19 @@ Nassa Studio, Lugano
 - Developed a React application for monitoring and interacting with smart home devices
 
 == 2017: Fullstack Developer
-
-Coopar, Lugano
+#link("https://www.linkedin.com/company/coopar/")[Coopar, Lugano]
 
 - Completed a 4-month internship building an Electron desktop application for survey visualization
-
-#v(2em)
 
 = OPEN SOURCE CONTRIBUTIONS
 
 == SwiftCrossUI - Windows Platform
 
-#link("https://github.com/moreSwift/swift-cross-ui/pull/75")[Contributed the initial Windows implementation for SwiftCrossUI]
+#link(
+  "https://github.com/moreSwift/swift-cross-ui/pull/75",
+)[Contributed the initial Windows implementation for SwiftCrossUI]
 
 - Implemented Windows platform support for a cross-platform Swift UI toolkit
-
-#v(2em)
 
 = EDUCATION AND TRAINING
 
@@ -83,8 +81,6 @@ Università della Svizzera italiana, Lugano 6900 CH
 - Software design and development fundamentals
 - Networking, client-server models, and web stacks
 - Collaboration in agile software teams
-
-#v(2em)
 
 = TECHNICAL SKILLS
 
