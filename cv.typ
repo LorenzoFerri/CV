@@ -15,7 +15,13 @@
   ],
 )
 
-#v(1.5em)
+#v(1em)
+
+= SUMMARY
+
+- Software engineer focused on mobile (SwiftUI, Jetpack Compose) and web (React) development
+- Experience integrating LLMs and AI agents into production applications
+- Master's background in Artificial Intelligence with knowledge of programming paradigms and design patterns
 
 = WORK EXPERIENCE
 
@@ -23,39 +29,39 @@
 
 #link("https://www.exmachina.ch")[Ex Machina, Lugano]
 
-- Integration of LLMs and AI agents into various applications to enhance functionality and user experience
-- Mobile developer of native Android/iOS application with SwiftUI and Jetpack Compose
-- Web developer of React web applications
+- Integrated LLMs and AI agents into applications to enhance functionality and workflows
+- Built native Android and iOS apps with SwiftUI and Jetpack Compose
+- Developed React web applications for internal and customer-facing tools
 
-== 2020-2021: Mobile developer
+== 2020-2021: Mobile Developer
 
 Nassa Studio, Lugano
 
-- Mobile developer of a Jetpack Compose tablet application for collision avoidance with power cables on helicopters
+- Built a Jetpack Compose tablet application for collision avoidance around power lines in helicopter operations
 
-== 2018-2021: Frontend developer
+== 2018-2021: Frontend Developer
 
 #link("https://www.oeomnibus.ch")[Omnibus Engineering SA, Taverne]
 
-- Web developer of a React application for interacting with smart home devices
+- Developed a React application for monitoring and interacting with smart home devices
 
-== 2017: Fullstack developer
+== 2017: Fullstack Developer
 
 Coopar, Lugano
 
-- 4 months internship developing an electron desktop application for surveys visualization
+- Completed a 4-month internship building an Electron desktop application for survey visualization
 
-#v(1.5em)
+#v(1em)
 
 = OPEN SOURCE CONTRIBUTIONS
 
-== SwiftCrossUI - Windows Implementation
+== SwiftCrossUI - Windows Platform
 
 #link("https://github.com/moreSwift/swift-cross-ui/pull/75")[Contributed the initial Windows implementation for SwiftCrossUI]
 
-- Implemented cross-platform UI support for Windows using Swift
+- Implemented Windows platform support for a cross-platform Swift UI toolkit
 
-#v(1.5em)
+#v(1em)
 
 = EDUCATION AND TRAINING
 
@@ -63,10 +69,9 @@ Coopar, Lugano
 
 Università della Svizzera italiana, Lugano 6900 CH
 
-- Machine Learning and Deep Learning
-- Computer Vision and Natural Language Processing
-- Proficiency in Python, TensorFlow, PyTorch, and other AI-related tools
-- Strong mathematical foundation in linear algebra, probability
+- Coursework in Machine Learning, Deep Learning, Computer Vision, and NLP
+- Experience with Python, TensorFlow, and PyTorch
+- Strong foundation in linear algebra and probability
 
 #pagebreak()
 
@@ -74,23 +79,20 @@ Università della Svizzera italiana, Lugano 6900 CH
 
 Università della Svizzera italiana, Lugano 6900 CH
 
-- Solid programming skills across multiple languages and paradigms
-- Proficiency in designing and developing software systems
-- Practical knowledge of networking, client-server models, and web stacks
-- Ability to work collaboratively in software development teams using agile methodologies
-- Analytical thinking and problem-solving applied to computational challenges
+- Programming across multiple languages and paradigms
+- Software design and development fundamentals
+- Networking, client-server models, and web stacks
+- Collaboration in agile software teams
 
-#v(1.5em)
+#v(1em)
 
 = TECHNICAL SKILLS
 
 == Programming Languages
 
-I have experience with a diverse range of programming languages across different domains and paradigms:
-
 - Swift
 - Kotlin
-- Typescript
+- TypeScript
 - C
 - C++
 - C\#
@@ -98,8 +100,6 @@ I have experience with a diverse range of programming languages across different
 - Lua
 
 == AI Agents & Tools
-
-Proficient in utilizing modern AI agents and tools to enhance productivity and solve complex problems:
 
 - Large Language Models (LLMs) integration and prompt engineering
 - AI-assisted code generation and debugging
