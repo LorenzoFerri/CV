@@ -1,6 +1,11 @@
 #show link: set text(fill: rgb("#0066CC"))
 #show link: underline
-#show heading.where(level: 1): it => [#v(1.5em) #it]
+#show heading.where(level: 1): it => [
+  #v(1em)
+  #emph(it)
+  #v(-0.8em)
+  #line(length: 100%, stroke: (thickness: 0.6pt))
+]
 
 #grid(
   columns: (1fr, auto),
@@ -18,13 +23,13 @@
   ],
 )
 
-= SUMMARY
+= Summary
 
 - Software engineer focused on mobile (SwiftUI, Jetpack Compose), web (React), and backend (Java, Spring Boot) development
 - Experience integrating LLMs and AI agents into production applications
 - Master's background in Artificial Intelligence with knowledge of programming paradigms and design patterns
 
-= WORK EXPERIENCE
+= Work Experience
 
 == 2021-Present: Software Engineer
 
@@ -52,7 +57,7 @@ Nassa Studio, Lugano
 
 - Completed a 4-month internship building an Electron desktop application for survey visualization
 
-= OPEN SOURCE CONTRIBUTIONS
+= Open Source Contributions
 
 == SwiftCrossUI - Windows Platform
 
@@ -62,7 +67,7 @@ Nassa Studio, Lugano
 
 - Implemented Windows platform support for a cross-platform Swift UI toolkit
 
-= EDUCATION AND TRAINING
+= Education and Training
 
 == 2018-2021: Master in Artificial Intelligence
 
@@ -82,7 +87,7 @@ Università della Svizzera italiana, Lugano 6900 CH
 - Networking, client-server models, and web stacks
 - Collaboration in agile software teams
 
-= TECHNICAL SKILLS
+= Technical Skills
 
 == Programming Languages
 
