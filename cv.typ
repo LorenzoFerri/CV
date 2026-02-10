@@ -15,11 +15,11 @@
   ],
   align(right)[
     Via delle Ale 4, Lugano, 6900 CH
-    #box(baseline: 25%, image("mappin.circle.svg", width: 1em)) \
+    #box(baseline: 25%, image("icons/mappin.circle.svg", width: 1em)) \
     #link("tel:+41765092342")[076 5092342]
-    #box(baseline: 25%, image("phone.circle.svg", width: 1em)) \
+    #box(baseline: 25%, image("icons/phone.circle.svg", width: 1em)) \
     #link("mailto:lorenzo.ferri@exmachina.ch")[lorenzo.ferri\@exmachina.ch]
-    #box(baseline: 25%, image("envelope.circle.svg", width: 1em))
+    #box(baseline: 25%, image("icons/envelope.circle.svg", width: 1em))
   ],
 )
 
