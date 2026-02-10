@@ -1,0 +1,29 @@
+name: Build CV
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Setup Typst
+        uses: typst-community/setup-typst@v3
+      
+      - name: Build CV
+        run: typst compile cv.typ cv.pdf
+      
+      - name: Upload CV artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: cv-pdf
+          path: cv.pdf
+          if-no-files-found: error
