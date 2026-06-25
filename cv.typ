@@ -178,7 +178,7 @@ Software engineer moving into game programming, with 4+ years of professional de
   [Ex Machina, Lugano],
   [2021 - Feb 2026],
 )[
-  - Built an interactive traffic simulation visualizer using Godot and SUMO, allowing users to inspect and control urban mobility scenarios such as road closures and direction changes; presented it at #link("https://m.devoxx.com/events/vdt26/talks/5440/driving-smarter-mobility-from-openstreetmap-to-real-time-traffic-simulation-with-sumo-godot")[Voxxed Days Ticino].
+  - Built an interactive traffic simulation visualizer using Godot and SUMO, allowing users to inspect and control urban mobility scenarios such as road closures and direction changes; presented it at #link("https://m.devoxx.com/events/vdt26/talks/5440/driving-smarter-mobility-from-openstreetmap-to-real-time-traffic-simulation-with-sumo-godot")[Voxxed Days Ticino] (#link("https://www.youtube.com/watch?v=4n73p8qm17Q")[video]).
   - Shipped production software across mobile, web, and backend systems using SwiftUI, Jetpack Compose, React, Java, and Spring Boot.
   - Built interactive UI-heavy applications with attention to responsiveness, state management, debugging, and maintainability.
   - Integrated LLMs and AI agents into production applications and internal workflows.
