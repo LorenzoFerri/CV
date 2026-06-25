@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lorenzo Ferri - Game Programmer</title>
+    <meta
+      name="description"
+      content="Lorenzo Ferri - Game programmer focused on gameplay systems, UI/input, modding, and tools."
+    />
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #202020;
+        --muted: #666;
+        --line: #d7d7d7;
+        --panel: #f4f4f4;
+        --paper: #fff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      main {
+        width: min(1040px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 56px 0 72px;
+      }
+
+      header {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 24px;
+        align-items: end;
+        border-bottom: 2px solid var(--ink);
+        padding-bottom: 24px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(40px, 7vw, 72px);
+        line-height: 0.95;
+        letter-spacing: 0;
+      }
+
+      .subtitle {
+        margin-top: 10px;
+        font-size: clamp(18px, 2vw, 24px);
+        font-weight: 700;
+      }
+
+      .contact {
+        text-align: right;
+        font-size: 15px;
+        line-height: 1.45;
+      }
+
+      a {
+        color: inherit;
+        text-underline-offset: 3px;
+      }
+
+      section {
+        margin-top: 36px;
+      }
+
+      h2 {
+        display: flex;
+        gap: 14px;
+        align-items: center;
+        margin: 0 0 18px;
+        font-size: 16px;
+        line-height: 1.2;
+        text-transform: uppercase;
+        letter-spacing: 0;
+      }
+
+      h2::after {
+        content: "";
+        height: 1px;
+        flex: 1;
+        background: var(--line);
+      }
+
+      h3 {
+        margin: 0;
+        font-size: 22px;
+        line-height: 1.2;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      ul {
+        margin: 10px 0 0;
+        padding-left: 22px;
+      }
+
+      li + li {
+        margin-top: 4px;
+      }
+
+      .profile {
+        max-width: 920px;
+        font-size: 18px;
+      }
+
+      .snapshot {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px 32px;
+      }
+
+      .snapshot p {
+        margin: 0;
+      }
+
+      .project,
+      .job,
+      .education-item {
+        padding-top: 18px;
+        border-top: 1px solid var(--line);
+      }
+
+      .project:first-of-type,
+      .job:first-of-type,
+      .education-item:first-of-type {
+        padding-top: 0;
+        border-top: 0;
+      }
+
+      .project + .project,
+      .job + .job,
+      .education-item + .education-item {
+        margin-top: 24px;
+      }
+
+      .row {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 18px;
+        align-items: baseline;
+      }
+
+      .meta {
+        color: var(--muted);
+        font-size: 15px;
+        text-align: right;
+      }
+
+      .links {
+        margin-top: 6px;
+        color: var(--muted);
+        font-size: 15px;
+      }
+
+      .columns {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 22px;
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        min-height: 42px;
+        padding: 0 16px;
+        border: 1px solid var(--ink);
+        border-radius: 4px;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      .button.secondary {
+        background: var(--panel);
+        border-color: var(--line);
+      }
+
+      @media (max-width: 760px) {
+        main {
+          width: min(100% - 28px, 1040px);
+          padding-top: 32px;
+        }
+
+        header,
+        .row,
+        .snapshot,
+        .columns {
+          grid-template-columns: 1fr;
+        }
+
+        .contact,
+        .meta {
+          text-align: left;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div>
+          <h1>Lorenzo Ferri</h1>
+          <div class="subtitle">Game Programmer | Gameplay Systems, Modding, Tools</div>
+        </div>
+        <div class="contact">
+          Lugano, Switzerland<br />
+          <a href="mailto:lorenzo.ferri96@gmail.com">lorenzo.ferri96@gmail.com</a><br />
+          <a href="tel:+41765092342">+41 76 509 23 42</a><br />
+          <a href="https://github.com/LorenzoFerri">github.com/LorenzoFerri</a><br />
+          <a href="https://lorenzoferri.itch.io">lorenzoferri.itch.io</a>
+        </div>
+      </header>
+
+      <section>
+        <h2>Profile</h2>
+        <p class="profile">
+          Software engineer moving into game programming, with 4+ years of professional development
+          experience, Godot game jam projects, and a public Elden Ring DLL mod. Strongest in gameplay
+          systems, player controls, UI/input, rapid prototyping, multiplayer prototypes, and native
+          mod/plugin development. Interested in the overlap between programming and design, especially
+          player controls, combat readability, and mechanics that interact cleanly with each other.
+        </p>
+        <div class="actions">
+          <a class="button" href="./cv.pdf">Download PDF CV</a>
+          <a class="button secondary" href="https://www.nexusmods.com/eldenring/mods/9832">RadialMenu on Nexus Mods</a>
+        </div>
+      </section>
+
+      <section>
+        <h2>Technical Snapshot</h2>
+        <div class="snapshot">
+          <p><strong>Gameplay:</strong> character control, combat implementation, progression/upgrade loops, UI/input, game feel iteration</p>
+          <p><strong>Programming:</strong> C++, C#, GDScript, Python, TypeScript, Java, Kotlin, Swift, Lua</p>
+          <p><strong>Engines:</strong> Godot; Unity and Unreal basics</p>
+          <p><strong>Engineering:</strong> Git, debugging, testing, CI/CD, cross-platform development, agile collaboration</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Selected Game Projects</h2>
+
+        <article class="project">
+          <div class="row">
+            <h3>RadialMenu - Elden Ring Mod</h3>
+            <div class="meta">C++, native DLL, Dear ImGui, MinHook, ModEngine | 2026</div>
+          </div>
+          <div class="links">
+            <a href="https://www.nexusmods.com/eldenring/mods/9832">Nexus Mods release</a> |
+            <a href="https://github.com/LorenzoFerri/RadialMenu">GitHub source</a>
+          </div>
+          <p>Public Elden Ring native DLL mod adding radial menus for spells and quick items.</p>
+          <ul>
+            <li>Implemented a controller and keyboard/mouse selection flow where holding the normal spell/item input opens a radial menu, directional input chooses an entry, and release confirms the selection while short taps keep the original behavior.</li>
+            <li>Integrated with the running game's data to resolve spells, quick items, localized names, and icons.</li>
+            <li>Released and maintained the mod for real users, including compatibility work with major Elden Ring mods and game updates.</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <div class="row">
+            <h3>Spell 4 Dead - Solo Game Jam Project</h3>
+            <div class="meta">Godot, GDScript, HTML5 | 2026</div>
+          </div>
+          <div class="links"><a href="https://lorenzoferri.itch.io/spell-4-dead">Play on itch.io</a></div>
+          <p>Solo arena survival prototype built during a 48-hour game jam.</p>
+          <ul>
+            <li>Designed and implemented the core loop: player movement, aiming, spell casting, enemy waves, upgrades/shop flow, UI, settings, and control rebinding.</li>
+            <li>Built a playable web release around four elemental attacks and round-based survival.</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <div class="row">
+            <h3>Ludo Long Game Jam 2025 - Online Co-op Vehicle Shooter</h3>
+            <div class="meta">Godot, GDScript, ENet | 2025</div>
+          </div>
+          <p>Two-player online co-op vehicle shooter prototype built during a month-long game jam.</p>
+          <ul>
+            <li>Implemented direct-IP multiplayer, driver/gunner roles, vehicle interaction, weapons, enemies, shop upgrades, and shared game state.</li>
+            <li>Built for an asymmetric co-op loop where one player drives and the other controls a mounted weapon.</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <div class="row">
+            <h3>Clown Therapy - Global Game Jam</h3>
+            <div class="meta">Godot, GDScript | 2024</div>
+          </div>
+          <div class="links"><a href="https://mrpriest.itch.io/clown-therapy">Play on itch.io</a></div>
+          <ul>
+            <li>Implemented core gameplay systems including movement, attacks, dash, bomb ability, combat interactions, controller support, and wave structure.</li>
+            <li>Iterated on combat readability and feel under 48-hour jam constraints.</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <div class="row">
+            <h3>The Roots of Revenge - Global Game Jam</h3>
+            <div class="meta">Godot, GDScript | 2023</div>
+          </div>
+          <div class="links"><a href="https://mrpriest.itch.io/the-roots-of-revenge">Play on itch.io</a></div>
+          <ul>
+            <li>Implemented procedural leg/root movement using inverse kinematics for spider-like character animation.</li>
+            <li>Contributed to the central root-based mechanic, where health, movement, climbing, and attacks are tied to the same character system.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section>
+        <h2>Professional Experience</h2>
+        <article class="job">
+          <div class="row">
+            <h3>Software Engineer</h3>
+            <div class="meta">2021 - Feb 2026</div>
+          </div>
+          <div class="links">Ex Machina, Lugano</div>
+          <ul>
+            <li>Shipped production software across mobile, web, and backend systems using SwiftUI, Jetpack Compose, React, Java, and Spring Boot.</li>
+            <li>Built interactive UI-heavy applications with attention to responsiveness, state management, debugging, and maintainability.</li>
+            <li>Integrated LLMs and AI agents into production applications and internal workflows.</li>
+            <li>Worked across frontend, backend, and mobile codebases in small agile teams, moving from prototypes to production features.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="columns">
+        <div>
+          <h2>Education</h2>
+          <article class="education-item">
+            <div class="row">
+              <h3>MSc Artificial Intelligence</h3>
+              <div class="meta">2018 - 2022</div>
+            </div>
+            <p>Universita della Svizzera italiana. Coursework and projects in machine learning, deep learning, computer vision, NLP, graphics/programming fundamentals, linear algebra, and probability.</p>
+          </article>
+          <article class="education-item">
+            <div class="row">
+              <h3>BSc Informatics</h3>
+              <div class="meta">2015 - 2018</div>
+            </div>
+            <p>Universita della Svizzera italiana. Software engineering fundamentals, programming paradigms, algorithms, networking, client-server systems, and collaborative development.</p>
+          </article>
+        </div>
+        <div>
+          <h2>Awards & Languages</h2>
+          <ul>
+            <li>1st Place - 12th Artificial Intelligence Cup, USI Informatics, 2018.</li>
+            <li>Global Game Jam participant every year since 2023.</li>
+            <li>USI Hackathon: Making Data Alive, 2019.</li>
+            <li><a href="https://github.com/moreSwift/swift-cross-ui/pull/75">Contributed</a> the initial Windows implementation for SwiftCrossUI.</li>
+            <li>Italian: native; English: C1.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

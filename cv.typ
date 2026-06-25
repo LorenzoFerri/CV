@@ -1,110 +1,240 @@
-#show link: set text(fill: rgb("#0066CC"))
+#set page(
+  paper: "a4",
+  margin: (x: 1.55cm, y: 1.3cm),
+)
+#set text(font: "Noto Sans", size: 9.05pt, lang: "en", fill: rgb("#222222"))
+#set par(leading: 0.56em, justify: false)
+#show link: set text(fill: rgb("#222222"))
 #show link: underline
-#show heading.where(level: 1): it => [
+
+#let ink = rgb("#222222")
+#let muted = rgb("#666666")
+#let rule = rgb("#d2d2d2")
+
+#let section(title) = [
   #v(1em)
-  #emph(it)
-  #v(-0.8em)
-  #line(length: 100%, stroke: (thickness: 0.6pt))
+  #text(size: 8.4pt, weight: "bold")[#upper(title)]
+  #v(-0.25em)
+  #line(length: 100%, stroke: (paint: rule, thickness: 0.6pt))
+  #v(0.18em)
 ]
 
+#let meta(body) = text(size: 8.25pt, fill: muted)[#body]
+
+#let item-title(title, right) = [
+  #grid(
+    columns: (1fr, auto),
+    column-gutter: 1em,
+    [#text(size: 10.6pt, weight: "bold")[#title]],
+    [#meta(right)],
+  )
+]
+
+#let project(title, stack, links, body) = [
+  #block(spacing: 1em)[
+    #v(0.1em)
+    #item-title(title, stack)
+    #if links != none [
+      #v(-0.2em)
+      #meta(links)
+    ]
+    #v(0.05em)
+    #body
+  ]
+]
+
+#let experience(title, org, date, body) = [
+  #block(spacing: 1em)[
+    #item-title(title, date)
+    #v(-0.2em)
+    #meta(org)
+    #v(0.05em)
+    #body
+  ]
+]
+
+#let skill(label, value) = [
+  #block(spacing: 1em)[
+    #text(weight: "bold")[#label:] #value
+  ]
+]
+
+#let skill-line(label, value) = [
+  #block(spacing: 1em)[
+    #text(weight: "bold")[#label:] #value
+  ]
+]
+
+#let header() = [
+  #grid(
+    columns: (1fr, auto),
+    column-gutter: 1em,
+    align: (left, bottom),
+    [
+      #text(size: 23.5pt, weight: "bold")[Lorenzo Ferri] \
+      #text(size: 11.2pt, weight: "bold")[Game Programmer | Gameplay Systems, Modding, Tools]
+    ],
+    [
+      #align(right)[
+        #text(size: 8.25pt)[
+          Lugano, Switzerland \
+          #link("mailto:lorenzo.ferri96@gmail.com")[lorenzo.ferri96\@gmail.com] \
+          #link("tel:+41765092342")[+41 76 509 23 42] \
+          #link("https://github.com/LorenzoFerri")[github.com/LorenzoFerri] \
+          #link("https://lorenzoferri.itch.io")[lorenzoferri.itch.io]
+        ]
+      ]
+    ],
+  )
+  #v(0.55em)
+  #line(length: 100%, stroke: (paint: ink, thickness: 0.85pt))
+]
+
+#header()
+
+#section[Profile]
+
+Software engineer moving into game programming, with 4+ years of professional development experience, Godot game jam projects, and a public Elden Ring DLL mod. Strongest in gameplay systems, player controls, UI/input, rapid prototyping, multiplayer prototypes, and native mod/plugin development. Interested in the overlap between programming and design, especially player controls, combat readability, and mechanics that interact cleanly with each other.
+
+#section[Technical Snapshot]
+
 #grid(
-  columns: (1fr, auto),
+  columns: (1fr, 1fr),
+  column-gutter: 0.8cm,
+  row-gutter: 0.36em,
   [
-    #title[Lorenzo Ferri]
-    == Curriculum Vitae
+    #skill-line[Gameplay][character control, combat implementation, progression/upgrade loops, UI/input, game feel iteration]
+    #skill-line[Engines][Godot; Unity and Unreal basics]
   ],
-  align(right)[
-    Via delle Ale 4, Lugano, 6900 CH
-    #box(baseline: 25%, image("icons/mappin.circle.svg", width: 1em)) \
-    #link("tel:+41765092342")[076 5092342]
-    #box(baseline: 25%, image("icons/phone.circle.svg", width: 1em)) \
-    #link("mailto:lorenzo.ferri@exmachina.ch")[lorenzo.ferri\@exmachina.ch]
-    #box(baseline: 25%, image("icons/envelope.circle.svg", width: 1em))
+  [
+    #skill-line[Programming][C++, C\#, GDScript, Python, TypeScript, Java, Kotlin, Swift, Lua]
+    #skill-line[Engineering][Git, debugging, testing, CI/CD, cross-platform development, agile collaboration]
   ],
 )
 
-= Summary
+#section[Selected Game Projects]
 
-- Software engineer focused on mobile (SwiftUI, Jetpack Compose), web (React), and backend (Java, Spring Boot) development
-- Experience integrating LLMs and AI agents into production applications
-- Master's background in Artificial Intelligence with knowledge of programming paradigms and design patterns
+#project(
+  [RadialMenu - Elden Ring Mod],
+  [C++, native DLL, Dear ImGui, MinHook, ModEngine | 2026],
+  [
+    #link("https://www.nexusmods.com/eldenring/mods/9832")[Nexus Mods release] |
+    #link("https://github.com/LorenzoFerri/RadialMenu")[GitHub source]
+  ],
+)[
+  Public Elden Ring native DLL mod adding radial menus for spells and quick items.
+  - Implemented a controller and keyboard/mouse selection flow where holding the normal spell/item input opens a radial menu, directional input chooses an entry, and release confirms the selection while short taps keep the original behavior.
+  - Integrated with the running game's data to resolve spells, quick items, localized names, and icons.
+  - Released and maintained the mod for real users, including compatibility work with major Elden Ring mods and game updates.
+]
 
-= Work Experience
+#project(
+  [Spell 4 Dead - Solo Game Jam Project],
+  [Godot, GDScript, HTML5 | 2026],
+  [#link("https://lorenzoferri.itch.io/spell-4-dead")[Play on itch.io]],
+)[
+  Solo arena survival prototype built during a 48-hour game jam.
+  - Designed and implemented the core loop: player movement, aiming, spell casting, enemy waves, upgrades/shop flow, UI, settings, and control rebinding.
+  - Built a playable web release around four elemental attacks and round-based survival.
+]
 
-== 2021-Present: Software Engineer
+#project(
+  [Ludo Long Game Jam 2025 - Online Co-op Vehicle Shooter],
+  [Godot, GDScript, ENet | 2025],
+  none,
+)[
+  Two-player online co-op vehicle shooter prototype built during a month-long game jam.
+  - Implemented direct-IP multiplayer, driver/gunner roles, vehicle interaction, weapons, enemies, shop upgrades, and shared game state.
+  - Built for an asymmetric co-op loop where one player drives and the other controls a mounted weapon.
+]
 
-#link("https://www.exmachina.ch")[Ex Machina, Lugano]
+#project(
+  [Clown Therapy - Global Game Jam],
+  [Godot, GDScript | 2024],
+  [#link("https://mrpriest.itch.io/clown-therapy")[Play on itch.io]],
+)[
+  - Implemented core gameplay systems including movement, attacks, dash, bomb ability, combat interactions, controller support, and wave structure.
+  - Iterated on combat readability and feel under 48-hour jam constraints.
+]
 
-- Integrated LLMs and AI agents into applications to enhance functionality and workflows
-- Built native Android and iOS apps with SwiftUI and Jetpack Compose
-- Developed React web applications for internal and customer-facing tools
-- Built backend services with Java and Spring Boot for scalable applications
+#project(
+  [The Roots of Revenge - Global Game Jam],
+  [Godot, GDScript | 2023],
+  [#link("https://mrpriest.itch.io/the-roots-of-revenge")[Play on itch.io]],
+)[
+  - Implemented procedural leg/root movement using inverse kinematics for spider-like character animation.
+  - Contributed to the central root-based mechanic, where health, movement, climbing, and attacks are tied to the same character system.
+]
 
-== 2020-2021: Mobile Developer
+#pagebreak()
 
-Nassa Studio, Lugano
+#header()
 
-- Built a Jetpack Compose tablet application for collision avoidance around power lines in helicopter operations
-
-== 2018-2021: Frontend Developer
-
-#link("https://www.oeomnibus.ch")[Omnibus Engineering SA, Taverne]
-
-- Developed a React application for monitoring and interacting with smart home devices
-
-== 2017: Fullstack Developer
-#link("https://www.linkedin.com/company/coopar/")[Coopar, Lugano]
-
-- Completed a 4-month internship building an Electron desktop application for survey visualization
-
-= Open Source Contributions
-
-== SwiftCrossUI - Windows Platform
-
-#link(
-  "https://github.com/moreSwift/swift-cross-ui/pull/75",
-)[Contributed the initial Windows implementation for SwiftCrossUI]
-
-- Implemented Windows platform support for a cross-platform Swift UI toolkit
-
-= Education and Training
-
-== 2018-2021: Master in Artificial Intelligence
-
-Università della Svizzera italiana, Lugano 6900 CH
-
-- Coursework in Machine Learning, Deep Learning, Computer Vision, and NLP
-- Experience with Python, TensorFlow, and PyTorch
-- Strong foundation in linear algebra and probability
+#section[Professional Experience]
 
 
-== 2015-2018: Bachelor in Informatics
+#experience(
+  [Software Engineer],
+  [Ex Machina, Lugano],
+  [2021 - Feb 2026],
+)[
+  - Shipped production software across mobile, web, and backend systems using SwiftUI, Jetpack Compose, React, Java, and Spring Boot.
+  - Built interactive UI-heavy applications with attention to responsiveness, state management, debugging, and maintainability.
+  - Integrated LLMs and AI agents into production applications and internal workflows.
+  - Worked across frontend, backend, and mobile codebases in small agile teams, moving from prototypes to production features.
+]
 
-Università della Svizzera italiana, Lugano 6900 CH
+#experience(
+  [Mobile Developer],
+  [Nassa Studio, Lugano],
+  [2020 - 2021],
+)[
+  - Built a Jetpack Compose tablet application for helicopter operation support, focused on map-like interaction and collision avoidance near power lines.
+]
 
-- Programming across multiple languages and paradigms
-- Software design and development fundamentals
-- Networking, client-server models, and web stacks
-- Collaboration in agile software teams
+#experience(
+  [Frontend Developer],
+  [Omnibus Engineering SA, Taverne],
+  [2018 - 2021],
+)[
+  - Developed a React application for monitoring and interacting with smart home devices.
+]
 
-= Technical Skills
+#experience(
+  [Fullstack Developer Intern],
+  [Coopar, Lugano],
+  [2017],
+)[
+  - Built an Electron desktop application for survey visualization during a 4-month internship.
+]
 
-== Programming Languages
+#section[Education]
 
-- Swift
-- Kotlin
-- Java
-- TypeScript
-- Python
-- C
-- C++
-- C\#
-- Haskell
-- Lua
+#item-title([MSc Artificial Intelligence - Universita della Svizzera italiana], [2018 - 2022])
+Coursework and projects in machine learning, deep learning, computer vision, NLP, graphics/programming fundamentals, linear algebra, and probability.
 
-== AI Agents & Tools
+#v(0.35em)
+#item-title([BSc Informatics - Universita della Svizzera italiana], [2015 - 2018])
+Software engineering fundamentals, programming paradigms, algorithms, networking, client-server systems, and collaborative development.
 
-- Large Language Models (LLMs) integration and prompt engineering
-- AI-assisted code generation and debugging
-- Machine Learning model development and optimization
-- Generative AI applications and workflows
+#grid(
+  columns: (1fr, 1fr),
+  column-gutter: 1cm,
+  [
+    #section[Awards & Events]
+
+    - 1st Place - 12th Artificial Intelligence Cup, USI Informatics, 2018 - university AI programming competition.
+    - Global Game Jam participant every year since 2023.
+    - USI Hackathon: Making Data Alive, 2019.
+  ],
+  [
+    #section[Open Source]
+
+    - #link("https://github.com/moreSwift/swift-cross-ui/pull/75")[Contributed] the initial Windows implementation for SwiftCrossUI.
+
+    #section[Languages]
+
+    - Italian: native.
+    - English: C1.
+  ],
+)
