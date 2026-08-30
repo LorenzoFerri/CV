@@ -2,8 +2,8 @@
   paper: "a4",
   margin: (x: 1.55cm, y: 1.3cm),
 )
-#set text(font: "Noto Sans", size: 9.05pt, lang: "en", fill: rgb("#222222"))
-#set par(leading: 0.56em, justify: false)
+#set text(font: "Noto Sans", size: 8.9pt, lang: "en", fill: rgb("#222222"))
+#set par(leading: 0.53em, justify: false)
 #show link: set text(fill: rgb("#222222"))
 #show link: underline
 
@@ -31,7 +31,7 @@
 ]
 
 #let project(title, stack, links, body) = [
-  #block(spacing: 1em)[
+  #block(spacing: 0.6em)[
     #v(0.1em)
     #item-title(title, stack)
     #if links != none [
@@ -129,6 +129,16 @@ Software engineer moving into game programming, with 4+ years of professional de
 ]
 
 #project(
+  [Borrowed Skin - Brackeys Game Jam 2026.2],
+  [Godot, GDScript, shaders, editor tooling | 2026],
+  [#link("https://luvbytes404.itch.io/borrowed-skin-moonmoss")[Play on itch.io]],
+)[
+  First-person narrative horror game created by a multidisciplinary team for Brackeys Game Jam 2026.2.
+  - Implemented the majority of the game's code, including an event-driven narrative director coordinating a 12-stage story, objectives, interactions, character states, blackouts, branching choices, and three endings.
+  - Served as tech artist, creating VFX and CRT post-processing shaders and building editor tools for character placement and the art team's workflow.
+]
+
+#project(
   [Spell 4 Dead - Solo Game Jam Project],
   [Godot, GDScript, HTML5 | 2026],
   [#link("https://lorenzoferri.itch.io/spell-4-dead")[Play on itch.io]],
@@ -163,7 +173,7 @@ Software engineer moving into game programming, with 4+ years of professional de
   [#link("https://mrpriest.itch.io/the-roots-of-revenge")[Play on itch.io]],
 )[
   - Implemented procedural leg/root movement using inverse kinematics for spider-like character animation.
-  - Contributed to the central root-based mechanic, where health, movement, climbing, and attacks are tied to the same character system.
+  - Contributed to the central root mechanic tying health, movement, climbing, and attacks into one character system.
 ]
 
 #pagebreak()
