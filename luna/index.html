@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Luna — Lorenzo Ferri | Portfolio</title>
+  <meta name="description" content="Luna: a personal Godot character action project. Character design, facial expressions, gameplay, environment captures, and development iterations rendered from Git history.">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./portfolio.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<main id="main">
+  <header>
+    <span>Lorenzo Ferri / Luna</span>
+    <a href="https://github.com/LorenzoFerri">GitHub</a>
+  </header>
+  <h1>Luna</h1>
+  <p class="subtitle">Personal character action project · In development</p>
+  <p class="intro">An ongoing prototype exploring scythe combat, character animation, and a stylized environment. Built in Godot, with Blender for the art workflow and Codex throughout development.</p>
+  <dl class="project-meta">
+    <div><dt>Work</dt><dd>Character assembly and texturing, gameplay systems, animation integration, shaders, VFX, environment assembly</dd></div>
+    <div><dt>Tools</dt><dd>Godot · Blender · Tripo · Codex</dd></div>
+  </dl>
+  <nav class="contents" aria-label="On this page"><a href="#character-design">Character design</a><a href="#combat">Combat</a><a href="#environment">Environment</a><a href="#blockout">Blockout comparison</a><a href="#iterations">Development history</a></nav>
+
+  <section id="character-design" aria-labelledby="character-design-heading">
+    <h2 id="character-design-heading">Character design</h2>
+    <p>The first week was dedicated to Luna’s design. I generated the character in separate pieces with Tripo and assembled them in Blender. I then did the texturing myself, developing the palette and face artwork to give the different parts a consistent visual identity.</p>
+    <h3>Character evolution</h3>
+    <div class="character-evolution">
+      <figure><a href="./media/character-history-early.webp"><img src="./media/character-history-early.webp" width="700" height="1000" alt="The early Luna body mesh in a T-pose with its UV checker pattern." loading="lazy"></a><figcaption><strong>Early mesh &amp; UVs</strong><span>1 Oct · Luna.blend</span></figcaption></figure>
+      <figure><a href="./media/character-history-textured.webp"><img src="./media/character-history-textured.webp" width="700" height="1000" alt="An early assembled Luna with white hair, a jacket, stockings, and initial textures." loading="lazy"></a><figcaption><strong>First assembled version</strong><span>2 Oct · LunaTextured.blend</span></figcaption></figure>
+      <figure><a href="./media/character-history-palette.webp"><img src="./media/character-history-palette.webp" width="700" height="1000" alt="Luna’s refined palette and costume, including red horns, detailed belt, and boots." loading="lazy"></a><figcaption><strong>Palette &amp; costume</strong><span>8 Oct · Luna.blend1 backup</span></figcaption></figure>
+      <figure><a href="./media/character-history-current.webp"><img src="./media/character-history-current.webp" width="700" height="1000" alt="The current Luna source model with the refined jacket, collar, materials, and face artwork." loading="lazy"></a><figcaption><strong>Current character</strong><span>Current Blender source</span></figcaption></figure>
+    </div>
+    <p class="small">Rendered from the saved Blender files with their original materials, a shared frontal camera, rest pose, and neutral lighting. Display height is normalized for comparison. The dated stages come from the archived files and backup.</p>
+    <h3>Facial expressions</h3>
+    <p>Eyes and mouths use separate texture atlases, with eight variants each. Their selections can be mixed independently, giving 64 combinations on the same face mesh. The artwork remains editable, and expressions can change alongside animation.</p>
+    <figure>
+      <a href="./media/character-expressions.webp"><img src="./media/character-expressions.webp" width="1920" height="1080" alt="Luna’s eight matching expression presets: Neutral, Scream, Oops, Unimpressed, Shocked, Pout, Smug, and Rage." loading="lazy"></a>
+      <figcaption>Matching expression presets shown on the current model. Eye and mouth variants can also be selected independently.</figcaption>
+    </figure>
+    <h3>Social pose</h3>
+    <figure>
+      <video controls playsinline preload="none" poster="./media/social-pose-poster.webp" width="1920" height="1080" aria-label="Luna stows her scythe, performs the social pose with an expression change, and returns to gameplay"><source src="./media/social-pose.mp4" type="video/mp4"></video>
+      <figcaption>The native social sequence: weapon stow, camera orbit, pose and expression change, then return to gameplay. Captured on 26 October 2026.</figcaption>
+    </figure>
+  </section>
+
+  <section id="combat" aria-labelledby="combat-heading">
+    <h2 id="combat-heading">Combat</h2>
+    <p>Light, heavy, and mixed combo routes, with animation-driven weapon collision, hitstop, trails, impact effects, and sound. Both clips were captured from the current project on 26 October 2026.</p>
+    <figure>
+      <video controls playsinline preload="none" poster="./media/attacks-arena-poster.webp" width="1920" height="1080" aria-label="Luna performing light, heavy, and mixed combos against training dummies"><source src="./media/attacks-arena.mp4" type="video/mp4"></video>
+      <figcaption>Light, heavy, and mixed combo routes in the training arena.</figcaption>
+    </figure>
+    <figure>
+      <video controls playsinline preload="none" poster="./media/attacks-mixed-poster.webp" width="1920" height="1080" aria-label="A closer view of Luna performing mixed light and heavy combo branches"><source src="./media/attacks-mixed.mp4" type="video/mp4"></video>
+      <figcaption>Closer view: mixed light/heavy branches, weapon contacts, and target reactions.</figcaption>
+    </figure>
+  </section>
+
+  <section id="environment" aria-labelledby="environment-heading">
+    <h2 id="environment-heading">Current environment</h2>
+    <p>Captured in the running game using Godot’s Forward+ renderer on 26 October 2026.</p>
+    <figure>
+      <a href="./media/current-bridge.webp"><img src="./media/current-bridge.webp" width="1920" height="1080" alt="Lanterns and a wooden bridge along a path beneath red trees and rocky cliffs." loading="lazy"></a>
+      <figcaption>Path, bridge, vegetation, and lighting.</figcaption>
+    </figure>
+    <div class="gallery">
+      <figure><a href="./media/current-overview.webp"><img src="./media/current-overview.webp" width="1920" height="1080" alt="An elevated view of the level’s connected terraces and paths above a sea of clouds." loading="lazy"></a><figcaption>Level layout and elevation.</figcaption></figure>
+      <figure><a href="./media/current-vista.webp"><img src="./media/current-vista.webp" width="1920" height="1080" alt="The Imperial Tower rising out of clouds against a painted evening sky." loading="lazy"></a><figcaption>Imperial Tower and cloud sea.</figcaption></figure>
+    </div>
+    <figure><a href="./media/current-waterfall.webp"><img src="./media/current-waterfall.webp" width="1920" height="1080" alt="The upper waterfall and river among the rocky terraces of the environment." loading="lazy"></a><figcaption>River and waterfall.</figcaption></figure>
+  </section>
+
+  <section id="blockout" aria-labelledby="blockout-heading">
+    <h2 id="blockout-heading">Blockout → current environment</h2>
+    <p>The saved CSG blockout re-enabled for comparison with the current level. Camera position, orientation, field of view, and lighting are shared between each pair.</p>
+    <fieldset class="view-options"><legend>View</legend><label><input type="radio" name="comparison-view" value="bridge" checked> Ground level</label><label><input type="radio" name="comparison-view" value="overview"> Overview</label></fieldset>
+    <figure>
+      <div class="comparison" id="comparison" style="--reveal:50%">
+        <img id="blockout-image" src="./media/blockout-bridge.webp" width="1920" height="1080" alt="Saved blockout from the ground-level camera." loading="lazy">
+        <img id="current-image" class="comparison-current" src="./media/current-bridge.webp" width="1920" height="1080" alt="Current environment from the same ground-level camera." loading="lazy">
+        <span class="compare-label left">Current</span><span class="compare-label right">Blockout</span><span class="divider" aria-hidden="true"></span>
+      </div>
+      <label class="slider-label" for="reveal">Reveal current environment <output id="reveal-value" for="reveal">50%</output></label>
+      <input id="reveal" type="range" min="0" max="100" value="50" aria-label="Reveal current environment over the saved blockout">
+      <figcaption>Drag the slider or use the arrow keys to compare the geometry.</figcaption>
+    </figure>
+  </section>
+
+  <section id="iterations" aria-labelledby="iterations-heading">
+    <h2 id="iterations-heading">Development history</h2>
+    <p>Earlier project revisions restored from Git and run in Godot. Each view uses the same camera across revisions; geometry, materials, lighting, and atmosphere come from the selected version.</p>
+    <label class="history-view-label" for="history-view">View <select id="history-view"><option value="bridge">Ground level</option><option value="overview">Overview</option></select></label>
+    <figure class="history-main">
+      <a id="history-full" href="./media/current-bridge.webp"><img id="history-image" src="./media/current-bridge.webp" width="1920" height="1080" alt="Current environment, ground-level view." loading="lazy"></a>
+      <figcaption id="history-caption" aria-live="polite">Current working version · 26 October 2026</figcaption>
+    </figure>
+    <div class="revisions" role="group" aria-label="Choose a project revision">
+      <button type="button" data-revision="5eef1f3" aria-pressed="false"><img src="./media/5eef1f3-bridge.webp" width="320" height="180" alt="" loading="lazy"><span>Terrain &amp; grass</span><small>20 Oct · <code>5eef1f3</code></small></button>
+      <button type="button" data-revision="c04c4cd" aria-pressed="false"><img src="./media/c04c4cd-bridge.webp" width="320" height="180" alt="" loading="lazy"><span>Sky &amp; clouds</span><small>20 Oct · <code>c04c4cd</code></small></button>
+      <button type="button" data-revision="a35f5a2" aria-pressed="false"><img src="./media/a35f5a2-bridge.webp" width="320" height="180" alt="" loading="lazy"><span>Environment pass</span><small>22 Oct · <code>a35f5a2</code></small></button>
+      <button type="button" data-revision="current" aria-pressed="true"><img src="./media/current-bridge.webp" width="320" height="180" alt="" loading="lazy"><span>Current version</span><small>26 Oct · Working copy</small></button>
+    </div>
+  </section>
+
+  <section class="notes" aria-labelledby="notes-heading">
+    <h2 id="notes-heading">Project notes</h2>
+    <p>Luna is an ongoing personal prototype. I use coding agents to implement and revise systems, then evaluate gameplay and visuals in the engine. The project combines custom work with third-party assets, including purchased animation and environment packs.</p>
+    <p class="small">Combat clips use scripted input sequences through the existing gameplay systems. Environment screenshots use fixed cameras. The blockout comparison uses the saved blockout nodes with current lighting; the Git comparison restores the historical project sources.</p>
+  </section>
+  <footer><span>Lorenzo Ferri</span><a href="https://github.com/LorenzoFerri">GitHub</a></footer>
+</main>
+</body>
+</html>
