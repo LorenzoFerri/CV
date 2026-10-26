@@ -81,6 +81,7 @@
           #link("mailto:lorenzo.ferri96@gmail.com")[lorenzo.ferri96\@gmail.com] \
           #link("tel:+41765092342")[+41 76 509 23 42] \
           #link("https://github.com/LorenzoFerri")[github.com/LorenzoFerri] \
+          #link("https://www.linkedin.com/in/lorenzo-ferri-dev/")[linkedin.com/in/lorenzo-ferri-dev] \
           #link("https://lorenzoferri.itch.io")[lorenzoferri.itch.io]
         ]
       ]
